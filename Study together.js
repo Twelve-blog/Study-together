@@ -1009,9 +1009,9 @@ function study_article(){
                             var tmp = Math.random();
                             try{
                                 if(tmp>0.9){
-                                    swipe(3*device.width/4+Math.random()*100,3*device.height/4+Math.random()*100,3*device.width/4-Math.random()*100,device.height/4,Math.random()*1000);
+                                    swipe(3*device.width/4,3*device.height/4+Math.random()*100,3*device.width/4,device.height/4-Math.random()*100,Math.random()*1000);
                                 }else if(tmp < 0.1){
-                                    swipe(4*device.width/4-Math.random()*100,device.height/4+Math.random()*100,3*device.width/4,3*device.height/4-Math.random()*100,Math.random()*1000);
+                                    swipe(3*device.width/4,device.height/4+Math.random()*100,3*device.width/4,3*device.height/4-Math.random()*100,Math.random()*1000);
                                 }
                             }catch(e){}
                             i++;
