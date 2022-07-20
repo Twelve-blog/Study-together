@@ -3,7 +3,7 @@
 一个人的精力往往有限，那么就靠大家一起来贡献代码
 
 # 📃hamibot 直接安装运行版本
-   [Study together](https://hamibot.com/marketplace/fIzEY?invite=dSIrR2k5wvDEem4uMfwwmptV)
+   [Study together](https://hamibot.com/marketplace/fIzEY?invite=97zA7EzsKSQqX7dkwuDJIK6w)
 
 # 📃如何参与贡献
 1. Fork 本仓库

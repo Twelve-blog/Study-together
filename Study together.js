@@ -1083,9 +1083,16 @@ function local_(){
     delay(2);
     text("要闻").findOne().parent().parent().child(3).click();
     delay(2);
-    className("android.support.v7.widget.RecyclerView").findOne().child(0).click();
+    try{
+        className("android.support.v7.widget.RecyclerView").findOne(500).child(0).click();
+    }
+    catch(e){
+        try{
+            className("androidx.recyclerview.widget.RecyclerView").findOne(500).child(0).click();
+        }catch(e){}
+    }
     delay(2);
-    back();
+    back_table();
     s.info('本地频道完成');
     delay(2);
 }
@@ -1809,6 +1816,9 @@ function zsyAnswer() {
             } while (!point);
             if(q_right == true){    // 如果当前题目正确
                 storage2.put(old_q,old_ans);    // 存入本地存储，减小下一次搜该题的时间
+            } else {            // 当出错时
+                if(storage2.contains(old_q))
+                    storage2.remove(old_q);    // 可能由于上次搜题因错误答案而点击正确，则此时删除本地存储
             }
             s.log('----------');
             yinzi = false;
